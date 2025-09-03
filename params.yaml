@@ -1,0 +1,47 @@
+ukbiobank:
+  main:
+    csv: file:///external/rprshnas01/external_data/uk_biobank/raw/2024/01/09/ukb676831.csv
+    delta: file:///external/rprshnas01/external_data/uk_biobank/676831/main.delta
+
+    schema:
+      field: file:///external/rprshnas01/external_data/uk_biobank/schema/field.txt
+
+    fields:
+      - "31"      # Sex
+      - "34"      # Year of birth
+      - "52"      # Month of birth
+      - "21003"   # Age at recruitment
+      - "21000"   # Ethnic background
+      - "54"      # Assessment centre
+      - "189"     # Townsend deprivation index at recruitment
+
+      # Mental health (online questionnaire)
+      - "20401"   # Ever depressed for a whole week
+      - "20403"   # Ever unenthusiastic/disinterested for a whole week
+      - "20405"   # Ever highly irritable/argumentative for 2+ days
+      - "20407"   # Longest period of depression
+      - "20411"   # Age when first depressed
+      - "20413"   # Number of depression episodes
+      - "20414"   # Ever sought help for mental distress
+      - "20416"   # Ever self-harmed
+
+      # Cognitive function
+      - "20023"   # Duration to complete cognitive tests
+      - "20016"   # Fluid intelligence score
+
+      # Lifestyle
+      - "1239"    # Smoking status
+      - "1558"    # Alcohol intake frequency
+
+    dictionary: file:///external/rprshnas01/external_data/uk_biobank/676831/2024/01/11/Data_Dictionary_Showcase.tsv
+
+    categories:
+      socio-demographics: https://biobank.ndph.ox.ac.uk/showcase/label.cgi?id=701
+      cognitive-function: https://biobank.ndph.ox.ac.uk/showcase/label.cgi?id=709
+      primary-demographics: https://biobank.ndph.ox.ac.uk/showcase/label.cgi?id=1001
+      mental-health: https://biobank.ndph.ox.ac.uk/showcase/label.cgi?id=1018
+
+    output: data/processed/ukb_subset.csv
+
+    exclude_ids: file:///external/rprshnas01/external_data/uk_biobank/filters/exclude_ids.txt
+

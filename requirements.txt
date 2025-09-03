@@ -1,0 +1,5 @@
+pyspark==3.5.0
+delta-spark==3.0.0
+pyyaml>=6.0
+pandas>=2.0.0
+
