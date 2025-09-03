@@ -1,2 +1,3 @@
-# UKB_ETL_Pipeline 
-Extracts and filters cohort data using Apache Spark and Delta Lake
+# UK Biobank ETL Pipeline
+
+This project provides a scalable ETL pipeline to extract, transform, and load UK Biobank data using Apache Spark and Delta Lake. It enables users to subset large UK Biobank datasets by selecting specific fields and instances, exclude participant IDs, rename columns based on a data dictionary, and export the processed cohort as a CSV file. Configurable via a YAML file (`params.yaml`), the pipeline leverages Spark for efficient data processing and includes logging for tracking progress. Designed for researchers and data engineers working with UK Biobank data, this tool streamlines data preparation for downstream analyses.
